@@ -1,7 +1,7 @@
 
 import { ObjectId } from "mongodb";
-import { User } from "../models/users";
-import { getDB } from "../dbs";
+import { User } from "../models/users.js";
+import { getDB } from "../dbs.js";
 
 // Mapear documento Mongo a User
 const mapUser = (doc: any): User => ({

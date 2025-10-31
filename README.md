@@ -1,5 +1,6 @@
 # Para lanzar
 npm start
+npm run dev
 
 # Si se quiere depurar, lanzar la configuración que hay en la carpeta .vscode
 desde run and debug seleccionar la configuración Debug con ts-node
@@ -11,7 +12,9 @@ creamos la bbdd testdb e con la coleccion users e importamos en json (desde comp
 
 # TODOs
 # tests unitarios
-Voy a usar vitest, que es similar a jest
+Voy a usar vitest, que es similar a jest pero mas moderno.
+Compila automaticamente a javascript
+npm run test
 
 # cucumber con gerking
 # trabajar con excels en node.js

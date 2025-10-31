@@ -1,6 +1,6 @@
 import express, { Application } from "express";
-import usersRouter from "./routes/users.routes";
-import { connectDB } from "./dbs";
+import usersRouter from "./routes/users.routes.js";
+import { connectDB } from "./dbs.js";
 
 const app: Application = express();
 const PORT = process.env.PORT || 3000;
