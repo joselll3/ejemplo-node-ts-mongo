@@ -1,8 +1,6 @@
 {
   "version": "0.2.0",
   "configurations": [
-    
-
     {
       "type": "node",
       "request": "launch",
@@ -13,6 +11,34 @@
       "skipFiles": ["<node_internals>/**"],
       "env": {
         "TS_NODE_TRANSPILE_ONLY": "true"
+      }
+    },
+    {
+      "name": "Vitest Debug (watch)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
+      "args": ["watch"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "autoAttachChildProcesses": true,
+      "skipFiles": ["<node_internals>/**"],
+      "env": {
+        "NODE_ENV": "test"
+      }
+    },
+    {
+      "name": "Vitest Debug (archivo actual)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
+      "args": ["run", "${relativeFile}"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "autoAttachChildProcesses": true,
+      "skipFiles": ["<node_internals>/**"],
+      "env": {
+        "NODE_ENV": "test"
       }
     }
   ]
