@@ -1,4 +1,4 @@
-import { Db, MongoClient } from "mongodb";
+import { Collection, Db, MongoClient } from "mongodb";
 
 const uri = "mongodb://localhost:27017"; // Cambia si usas otro puerto o usuario
 const client = new MongoClient(uri);
@@ -20,4 +20,8 @@ export async function connectDB() {
 export function getDB() {
   if (!_db) throw new Error("Base de datos no inicializada. Llama a connectDB primero.");
   return _db;
+}
+
+export function getUsersCollection(): Collection {
+  return getDB().collection('users');
 }
